@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniProject1</title>
+
+    <link rel="stylesheet" href="styleforMP1.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="item item-1">Arnel</div>
+        <div class="item item-2"><img style="width: 420px; height: 520px;" src="img/photome.png" alt="me"></div>
+        <div class="item item-3"> <img  style="width: 300px; height: 150px; object-fit:contain; position: relative; top: 10px;" src="img/projectsn-removebg-preview.png" alt="ProjectSin"></div>
+        <div class="item item-9"> <h5>Hi! The name's</h5></div>
+        <div class="item item-8"> Display</div>
+        <div class="item item-10"><h2><strong>WEB DEVELOPER</strong></h2></div>
+    </header>
+    <main class="container">
+        <div class="item item-4">
+            <a tabindex="0" class="btn btn-lg btn-success" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="About me" data-bs-content="And here's some amazing content. It's very engaging. Right?"
+            style="--bs-btn-padding-y: .3rem; --bs-btn-padding-x: 2.5rem; --bs-btn-font-size: 1rem;">
+            <strong>ABOUT</strong>
+        </a>
+        </div>
+        <div class="item item-5">
+            <a tabindex="0" class="btn btn-lg btn-primary" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Work Related" data-bs-content="And here's some amazing content. It's very engaging. Right?"
+            style="--bs-btn-padding-y: .3rem; --bs-btn-padding-x: 2.7rem; --bs-btn-font-size: 1rem;">
+            <strong>WORK</strong>
+        </a>
+        </div>
+        <div class="item item-6">
+            <button type="button" class="btn btn-danger" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content=" Follow me on my social media accounts. Support me as well, by subscribing on these channels: "
+            style="--bs-btn-padding-y: .3rem; --bs-btn-padding-x: 1.25rem; --bs-btn-font-size: 1rem;">
+                <strong>SUBSCRIBE</strong>
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="item item-7"> TECH STACK: <img style="width: 60px; height: 60px;" src="img/html.png" alt="html5_logo">
+            <img style="width: 45px; height: 45px; opacity: 100;" src="img/css33-PhotoRoom.png-PhotoRoom.png" alt="css3_logo">
+        </div>
+        <div class="item item-11">Let's Talk:
+            <a target="_blank" title="arnhel11@gmail.com" href="https://mail.google.com/mail/u/0/#inbox"><i class="bi bi-google"></i></a>
+            <a target="_blank" title="linkedin.com/in/arnel-merillo" href="https://www.linkedin.com/in/arnel-merillo-43205a24a/"><i class="bi bi-linkedin"></i></a>
+            <a target="_blank" title="https://www.facebook.com/arnhel11" href="https://www.facebook.com/arnhel11"><i class="bi bi-facebook"></i></a>
+            <a target="_blank" title="instagram.com/kuya_ey011" href="https://www.instagram.com/kuya_ey011"><i class="bi bi-instagram"></i></a>
+        </div>
+
+        <div class="item item-12">
+            <a target="_blank" title="arnhel11@gmail.com" href="https://mail.google.com/mail/u/0/#inbox"><img style="width: 45px; height: 45px; opacity: 100;" src="img/DeviantArt_Logo-PhotoRoom.png-PhotoRoom.png" alt="css3_logo"></a>
+            <a target="_blank" title="linkedin.com/in/arnel-merillo" href="https://www.linkedin.com/in/arnel-merillo-43205a24a/"><i class="bi bi-youtube"></i></a>
+            <a target="_blank" title="instagram.com/kuya_ey011" href="https://www.instagram.com/kuya_ey011"><i class="bi bi-instagram"></i></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+        const popover = new bootstrap.Popover('.popover-dismiss', {
+        trigger: 'focus'
+            })
+    </script>
+</body>
+</html>
