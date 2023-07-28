@@ -23,7 +23,7 @@ header{
     height: 600px;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(autofit, minmax (400px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
 }
 
 main{
@@ -163,9 +163,10 @@ footer{
     border-style: double;
     border-color:lightsteelblue;
     background-color:rgb(228, 222, 222);
-    color:rgb(13, 13, 56);
+    color:rgb(46, 46, 139);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: small;
+    opacity: 80%;
 }
 
 .item-9 {
