@@ -13,7 +13,6 @@ function heapify(arr, N, i)
 
     // If left child is larger than root
     if (l < N && arr[l] > arr[largest])
-        largest = l;
 
     // If right child is larger than largest so far
     if (r < N && arr[r] > arr[largest])
