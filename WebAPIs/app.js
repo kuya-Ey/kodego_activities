@@ -1,30 +1,29 @@
-// // genres-movielist 'GET'
+// genres-movielist 'GET'
 
-// // const data = null;
+// const data = null;
 
-// // const xhr = new XMLHttpRequest();
-// // xhr.withCredentials = false;
+// const xhr = new XMLHttpRequest();
+// xhr.withCredentials = false;
 
-// // xhr.open('GET', 'https://api.themoviedb.org/3/genre/movie/list?language=en');
-// // xhr.setRequestHeader('accept', 'application/json');
-// // xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMjNlNzJkMzFkN2NlMDlkODBjNTk4MjRhMTg0Mzc2MyIsInN1YiI6IjY0ZTVmZGQ5YzNjODkxMDBlMzVmMmViMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.E2RZVrF5jI3XqIFMRTXxJl7yc1edfsZB8paHwBrBSuY');
+// xhr.addEventListener('readystatechange', function () {
+//   if (this.readyState === this.DONE) {
+//     console.log(this.responseText);
+//   }
+// });
 
-// // xhr.addEventListener('readystatechange', function () {
-// //   if (xhr.status === 200 && xhr.readyState === 4) {
-// //     const req = JSON.parse(xhr.responseText);
-// //     console.log(this.responseText);
-// //   }
-// // });
+// xhr.open('GET', 'https://api.themoviedb.org/3/genre/movie/list?language=en');
+// xhr.setRequestHeader('accept', 'application/json');
+// xhr.setRequestHeader('Authorization', 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMjNlNzJkMzFkN2NlMDlkODBjNTk4MjRhMTg0Mzc2MyIsInN1YiI6IjY0ZTVmZGQ5YzNjODkxMDBlMzVmMmViMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.E2RZVrF5jI3XqIFMRTXxJl7yc1edfsZB8paHwBrBSuY');
 
-// // xhr.send(data);
+// xhr.send(data);
 
 // GET method
 let button = document.getElementById('button');
 
+// create an XMLHttpRequest object
 const req = new XMLHttpRequest();
 
-req.open('GET', 'https://api.themoviedb.org/3/genre/movie/list?language=en');
-
+// define a callback function, this case with an eventListener
 button.addEventListener('click', function(){
     if(req.status === 200 && req.readyState === 4){
         const res = JSON.parse(req.responseText);
@@ -34,6 +33,9 @@ button.addEventListener('click', function(){
         // console.log("Something went wrong!");
     }
 });
+
+// send a request to the server
+req.open('GET', 'https://api.themoviedb.org/3/genre/movie/list?language=en');
 
 req.send();
 
@@ -60,3 +62,4 @@ req.send();
 // }
 
 // req.send(JSON.stringify(newUser));
+
