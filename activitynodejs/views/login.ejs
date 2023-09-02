@@ -1,0 +1,48 @@
+<%-include('header') -%>
+    <br>
+    <div class="text-center center-div" id="login">
+        <div class="container w-25 border py-5">
+            <div class="title pb-5">
+               <h2 class="font-weight-bold">
+                 How are you today?
+               </h2>
+                <span class="label">
+                Login for the existing user
+            </span>
+            <% if(locals.logout) {%>
+                <div class="alert alert-success text-center">
+                    <%= logout%>
+                </div>
+            <%}%>
+            </div>
+    
+        <form action="/login" method="POST">
+            <div class="form-floating mb-3">
+                <input type="email" placeholder="email" class="form-control" id="floatingInput" value="panhealthcares@test.com" name="email">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <br>
+            <div class="form-floating">
+                <input type="password" placeholder="password" class="form-control" id="floatingPassword" value="12345678" name="password">
+                <label for="floatingPassword">Password</label>
+
+                <button type="submit" class="btn btn-success rounded-pill float-end">Log In</button>
+            </div>
+            <!-- <br> -->
+             
+           
+        </form>
+        <br>
+         <% if(locals.errors) {%>
+                <div class="alert alert-danger text-center">
+                    <%= errors%>
+                </div>
+            <%}%>
+             <% if(locals.isInvalid) {%>
+                <div class="alert alert-danger text-center">
+                    <%= isInvalid%>
+                </div>
+            <%}%>
+          </div>
+    </div>
+<%-include('footer') -%>
