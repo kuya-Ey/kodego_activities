@@ -13,7 +13,7 @@ const app = express();
 
 //set the environment variables
 const hostname = process.env.HOSTNAME || '127.0.0.1';
-const port = process.env.PORT || '3000';
+const port = process.env.PORT || '5500';
 
 //set the templating engine
 app.set('view engine', 'ejs');
