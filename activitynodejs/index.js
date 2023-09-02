@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
 const session = require('express-session')
 
-// const router = require('./router');
+const router = require('./router');
 
 //create the server
 const app = express();
@@ -37,7 +37,7 @@ app.use(session({
 }));
 
 //specify the routers
-// app.use('/', router);
+app.use('/', router);
 
 //listen to the server
 app.listen(port, ()=>{
