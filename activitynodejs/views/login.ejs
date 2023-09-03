@@ -1,11 +1,11 @@
-<%-include('header') -%>
+
     <br>
     <div class="text-center center-div" id="login">
         <div class="container w-25 border py-5">
             <div class="title pb-5">
-               <h2 class="font-weight-bold">
+               <h1 class="font-weight-bold">
                  How are you today?
-               </h2>
+               </h1>
                 <span class="label">
                 Login for the existing user
             </span>
@@ -28,9 +28,16 @@
 
                 <button type="submit" class="btn btn-success rounded-pill float-end">Log In</button>
             </div>
-            <!-- <br> -->
+
+            <div></div>
+            <br>
              
-           
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <em>Keep me logged in.</em>
+                </label>
+              </div>
         </form>
         <br>
          <% if(locals.errors) {%>
@@ -44,6 +51,7 @@
                 </div>
             <%}%>
           </div>
-          <div class="">Sign Up?</div>
+          <div class="sign-up">
+            <a href=""><h3><em>Sign Up?</em></h3></a>
+        </div>
     </div>
-<%-include('footer') -%>
