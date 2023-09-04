@@ -57,21 +57,31 @@ router.get('/dashboard',(req, res)=>{
     if(req.session.user){
         res.render('dashboard',{title:'Dashboard', user: req.session.user });
     }else{
+        res.status(403);
+    }
+});
+
+
+router.get('/appointment',(req, res)=>{
+    if(req.session.user){
+        res.render('appointment',{title:'Appointment', user: req.session.user });
+    }else{
         res.sendStatus(status);
     }
 });
 
+router.get('/teleconsult',(req, res)=>{
+    if(req.session.user){
+        res.render('teleconsult',{title:'Teleconsult', user: req.session.user });
+    }else{
+        res.sendStatus(status);
+    }
+});
 
 //route to billing
 router.get('/billing',(req, res)=>{
     if(req.session.user){
         res.render('billing',{title:'Billing', user: req.session.user });
-    }else{
-        res.sendStatus(status);
-=======
-router.get('/appointment',(req, res)=>{
-    if(req.session.user){
-        res.render('appointment',{title:'Appointment', user: req.session.user });
     }else{
         res.sendStatus(status);
     }
