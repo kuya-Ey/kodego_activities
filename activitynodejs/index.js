@@ -23,6 +23,7 @@ app.set('view engine', 'ejs');
 //set the folder to access the static assets
 app.use('/static',express.static(path.join(__dirname, 'public')));
 app.use('/assets',express.static(path.join(__dirname, 'public')));
+app.use('/public/assets/',express.static('./public/assets'));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -30,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-//configure the session
+// configure the session
 app.use(session({
     secret: uuidv4(),
     resave: false,
