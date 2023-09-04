@@ -1,7 +1,7 @@
-<%-include('header') -%>
-    <br>
+<%- include('header') -%>
+
     <div class="text-center center-div" id="login">
-        <div class="container w-25 border py-5">
+        <div class="container w-25 h-100 border py-10">
             <div class="title pb-5">
                <h1 class="font-weight-bold">
                  How are you today?
@@ -26,7 +26,7 @@
                 <input type="password" placeholder="password" class="form-control" id="floatingPassword" value="12345678" name="password">
                 <label for="floatingPassword">Password</label>
 
-                <button type="submit" class="btn btn-success rounded-pill float-end">Log In</button>
+                <button type="submit" class="btn btn-success rounded-pill float-md-end">Log In</button>
             </div>
 
             <div></div>
@@ -55,4 +55,6 @@
             <a href=""><h3><em>Sign Up?</em></h3></a>
         </div>
     </div>
-<%-include('footer') -%>
+
+    <%- include('footer') -%>
+
