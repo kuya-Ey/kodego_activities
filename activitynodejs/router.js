@@ -6,7 +6,7 @@ const {check, validationResult} = require('express-validator');
 const router = express.Router();
 
 const credential = {
-    email: 'panhealthcares@test.com',
+    email: 'releafhealthcares@test.com',
     password: '12345678'
 };
 
@@ -57,9 +57,19 @@ router.get('/dashboard',(req, res)=>{
     if(req.session.user){
         res.render('dashboard',{title:'Dashboard', user: req.session.user });
     }else{
-        res.send(403);
+        res.sendStatus(status);
     }
 });
+
+router.get('/appointment',(req, res)=>{
+    if(req.session.user){
+        res.render('appointment',{title:'Appointment', user: req.session.user });
+    }else{
+        res.sendStatus(status);
+    }
+});
+
+
 
 //route to destroy the session
 router.get('/logout', (req, res)=>{
