@@ -17,9 +17,6 @@
           <a class="nav-link" href="#">ABOUT</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">APPOINTMENT</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#">TELE-CONSULT</a>
         </li>
         <li class="nav-item dropdown">
@@ -37,30 +34,37 @@
     </div>
   </div>
 </nav>
-<button><a href="/billing">to billing</a></button>
-<div class="cards">
-  <div class="card" style="width: 18rem;">
-    <img src="public/assets/leaficon.png" class="card-img-top" alt="Appointment">
-    <div class="card-body">
-      <h5 class="card-title">Appointment</h5>
-      <p class="card-text">Schedule an appointment with one of our exemplary Doctors.</p>
-      <a href="Appointment" class="btn btn-primary">Book an appointment</a>
+<div class="main-container">
+  <div class="item item-1">
+    <div class="mb-3">
+      <h3>Billing and Contact Information:</h3>
+      <br>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Full Name">
+      <br>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Address">
+      <br><br><br>
+      <img id="scope" src="public/assets/scopey.png" height="60%" width="100%" alt="Stethoscope">
     </div>
   </div>
-  <div class="card" style="width: 18rem;">
-    <img src="public/assets/leaficon reverse.png" class="card-img-top" alt="Tele-Consult">
-    <div class="card-body">
-      <h5 class="card-title">Tele-Consult</h5>
-      <p class="card-text">Speak to a Professional ASAP. </p>
-      <a href="#" class="btn btn-primary">Take action now</a>
+  <div class="item item-2">
+    <br>
+    <div class="mb-3">
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Contact Number">
+      <br>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email Address">
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Agree to Terms and Conditions
+      </label>
+    </div>
+    <br><br>
+    <div>
+      <button type="submit" class="btn btn-success rounded-pill float-md-end">Confirm</button>
     </div>
   </div>
 </div>
-    <!-- <div class="text-center center-div mt-5" id="login">
-      <div class="container w-25 border py-5 mt-5">
-        <h3>Dashboard</h3>
-        <h5><%= locals.user?user:'No email found'  %></h5>
-        <a href="/logout">Logout</a>
-      </div>
-    </div> -->
+
+
 <%-include('footer') -%>

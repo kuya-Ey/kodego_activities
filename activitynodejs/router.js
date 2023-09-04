@@ -61,6 +61,14 @@ router.get('/dashboard',(req, res)=>{
     }
 });
 
+
+//route to billing
+router.get('/billing',(req, res)=>{
+    if(req.session.user){
+        res.render('billing',{title:'Billing', user: req.session.user });
+    }else{
+        res.sendStatus(status);
+=======
 router.get('/appointment',(req, res)=>{
     if(req.session.user){
         res.render('appointment',{title:'Appointment', user: req.session.user });
@@ -82,5 +90,6 @@ router.get('/logout', (req, res)=>{
         }
     })
 });
+
 
 module.exports = router;
