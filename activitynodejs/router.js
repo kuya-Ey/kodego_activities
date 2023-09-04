@@ -61,6 +61,16 @@ router.get('/dashboard',(req, res)=>{
     }
 });
 
+//route to billing
+router.get('/billing',(req, res)=>{
+    if(req.session.user){
+        res.render('billing',{title:'Billing', user: req.session.user });
+    }else{
+        res.send(403);
+    }
+});
+
+
 //route to destroy the session
 router.get('/logout', (req, res)=>{
     req.session.destroy(function(err){
@@ -72,5 +82,6 @@ router.get('/logout', (req, res)=>{
         }
     })
 });
+
 
 module.exports = router;
