@@ -1,9 +1,62 @@
 <%-include('header') -%>
-    <div class="text-center center-div mt-5" id="login">
+<nav class="navbar" style="background-color: #00ff4c58;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="public/assets/leaficon.png" alt="Logo" height="40px" width="40px" class="d-inline-block align-text-top">
+      ReLeaf
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">TELE-CONSULT</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            MY ACCOUNT <%= locals.user?user:'No email found'  %>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">HISTORY</a></li>
+            <li><a class="dropdown-item" href="#">PROFILE</a></li>
+            <li><a class="dropdown-item" href="#">SETTING</a></li>
+            <li><a class="dropdown-item" href="/logout", text-decoration: none>LOGOUT</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="cards">
+  <div class="card" style="width: 18rem;">
+    <img src="public/assets/leaficon.png" class="card-img-top" alt="Appointment">
+    <div class="card-body">
+      <h5 class="card-title">Appointment</h5>
+      <p class="card-text">Schedule an appointment with one of our exemplary Doctors.</p>
+      <a href="#" class="btn btn-primary">Book an appointment</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="public/assets/leaficon reverse.png" class="card-img-top" alt="Tele-Consult">
+    <div class="card-body">
+      <h5 class="card-title">Tele-Consult</h5>
+      <p class="card-text">Speak to a Professional ASAP. </p>
+      <a href="#" class="btn btn-primary">Take action now</a>
+    </div>
+  </div>
+</div>
+    <!-- <div class="text-center center-div mt-5" id="login">
       <div class="container w-25 border py-5 mt-5">
         <h3>Dashboard</h3>
         <h5><%= locals.user?user:'No email found'  %></h5>
         <a href="/logout">Logout</a>
       </div>
-    </div>
+    </div> -->
 <%-include('footer') -%>
