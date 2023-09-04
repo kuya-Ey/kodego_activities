@@ -61,29 +61,39 @@ router.get('/dashboard',(req, res)=>{
     }
 });
 
+//route to about page
+router.get('/about',(req, res)=>{
+    if(req.session.user){
+        res.render('about',{title:'About', user: req.session.user });
+    }else{
+        res.status(403);
+    }
+});
 
+//route to appointment page
 router.get('/appointment',(req, res)=>{
     if(req.session.user){
         res.render('appointment',{title:'Appointment', user: req.session.user });
     }else{
-        res.sendStatus(status);
+        res.status(403);
     }
 });
 
+//route to teleconsult page
 router.get('/teleconsult',(req, res)=>{
     if(req.session.user){
         res.render('teleconsult',{title:'Teleconsult', user: req.session.user });
     }else{
-        res.sendStatus(status);
+        res.status(403);
     }
 });
 
-//route to billing
+//route to billing page
 router.get('/billing',(req, res)=>{
     if(req.session.user){
         res.render('billing',{title:'Billing', user: req.session.user });
     }else{
-        res.sendStatus(status);
+        res.status(403);
     }
 });
 
