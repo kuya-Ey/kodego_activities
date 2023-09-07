@@ -1,60 +1,65 @@
 <%- include('header') -%>
 
-    <div class="text-center center-div" id="login">
-        <div class="container w-25 h-100 border py-10">
-            <div class="title pb-5">
-               <h1 class="font-weight-bold">
-                 How are you today?
-               </h1>
-                <span class="label">
-                Login for the existing user
-            </span>
-            <% if(locals.logout) {%>
-                <div class="alert alert-success text-center">
-                    <%= logout%>
-                </div>
-            <%}%>
+    <header class="header">
+        <span class="logo">
+            <div class="logo__alignment">
+                <a href="">LoGo</a>
             </div>
-    
+        </span>
+    </header>
+
+
+    <div class="container">
+
         <form action="/login" method="POST">
-            <div class="form-floating mb-3">
-                <input type="email" placeholder="email" class="form-control" id="floatingInput" value="releafhealthcares@test.com" name="email">
-                <label for="floatingInput">Email address</label>
-            </div>
-            <br>
-            <div class="form-floating">
-                <input type="password" placeholder="password" class="form-control" id="floatingPassword" value="12345678" name="password">
-                <label for="floatingPassword">Password</label>
 
-                <button type="submit" class="btn btn-success rounded-pill float-md-end">Log In</button>
+            <h1>Secure login</h1>
+
+            <div class="desc">
+                <p>Log in your Account to Get
+                    Full Access<span>$reg</span>
+                </p>
             </div>
 
-            <div></div>
-            <br>
-             
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  <em>Keep me logged in.</em>
-                </label>
-              </div>
+            <div class="input-group">
+                <input type="email" name="email" class="input" value="releafhealthcares@test.com" required>
+                <label class="user-label">Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="password" class="input" value="12345678" required>
+                <label class="pass-label">Password</label>
+            </div>
+
+            <p class="forgot__password">
+                <a href="#">Forgot password?</a>
+            </p>
+
+            <button type="submit" class="btn">
+                Log in
+            </button>
         </form>
-        <br>
-         <% if(locals.errors) {%>
-                <div class="alert alert-danger text-center">
-                    <%= errors%>
-                </div>
-            <%}%>
-             <% if(locals.isInvalid) {%>
-                <div class="alert alert-danger text-center">
-                    <%= isInvalid%>
-                </div>
-            <%}%>
-          </div>
-          <div class="sign-up">
-            <a href="#" aria-disabled=""><h3><em>Sign Up?</em></h3></a>
+    </div>
+
+    <footer class="footer">
+
+        <div class="sign__up">
+            <a href="#">New here? Sign up</a>
+        </div>
+
+    </footer>
+
+    <div class="terms">
+
+        <div class="conditions">
+            <a href="#">help</a>
+            <span class="divider">&#x2022</span>
+            <a href="#">Privacy & Security</a>
+            <span class="divider">&#x2022</span>
+            <a href="#">Terms of Use</a>
         </div>
     </div>
+
 
     <%- include('footer') -%>
 
